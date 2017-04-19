@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+env:
+  DOCKER_COMPOSE_VERSION: 1.8.0
+
+script:
+    - "'-c \"which ruby && which node && which php && which perl && which python\"'"
