@@ -1,0 +1,29 @@
+{
+  "name": "slack-codegolf-alpine",
+  "version": "0.0.1",
+  "description": "Play ground: https://codegolfbeta.slack.com/",
+  "scripts": {
+    "start": "node --optimize-for-size index.js",
+    "lint": "eslint --ignore-path .gitignore -c .eslintrc .",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "engines": {
+    "node": ">=6.4.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "puid": "^1.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slack-codegolf/alpine-codegolf"
+  },
+  "author": "slack-codegolf",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1"
+  },
+  "private": true
+}

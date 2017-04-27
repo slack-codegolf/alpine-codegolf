@@ -1,6 +1,6 @@
 FROM alpine
 
-ENV PHP_MEMORY_LIMIT 512M
+ENV PHP_MEMORY_LIMIT 128M
 
 RUN apk add --no-cache \
     bash \
@@ -18,3 +18,12 @@ RUN apk add --no-cache \
 
 ENV JAVA_HOME /usr/lib/jvm/default-jvm
 ENV PATH $PATH:/usr/lib/jvm/default-jvm/jre/bin:/usr/lib/jvm/default-jvm/bin
+
+RUN adduser -D noroot
+USER noroot
+WORKDIR /home/noroot
+
+ADD . /home/noroot/
+RUN npm install && mkdir input && mkdir output && mkdir answer
+
+CMD npm start

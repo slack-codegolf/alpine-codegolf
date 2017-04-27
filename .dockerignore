@@ -1,0 +1,8 @@
+input/
+output/
+answer/
+node_modules/
+.*
+.git*
+LICENSE
+Dockerfile
